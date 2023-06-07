@@ -1,0 +1,45 @@
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons'
+
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import SettingsScreen from './screens/SettingsScreen';
+
+const Tab = createBottomTabNavigator();
+
+
+const Navigation = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+       initialRouteName='Home'
+       backBehavior='history'
+       screenOptions={{
+        tabBarActiveTintColor: '#3b82f6',
+        tabBarStyle: { paddingBottom: 3 }        
+       }}
+       >
+        <Tab.Screen name='Home' component={HomeScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+        <MaterialCommunityIcons name="home" size={size} color={color} />
+        ),
+        }} />
+        <Tab.Screen name='Profile' component={ProfileScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+        <MaterialIcons name="person" size={size} color={color} />
+        ),
+        }} />
+        <Tab.Screen name='Settings' component={SettingsScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+        <MaterialIcons name="settings" size={size} color={color} />
+        ),
+        }} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default Navigation;
