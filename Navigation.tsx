@@ -7,6 +7,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import GamesScreen from './screens/GamesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +26,11 @@ const Navigation = () => {
         <Tab.Screen name='Home' component={HomeScreen} options={{
             tabBarIcon: ({ color, size }) => (
         <MaterialCommunityIcons name="home" size={size} color={color} />
+        ),
+        }} />
+        <Tab.Screen name='All Games' component={GamesScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="gamepad-variant-outline" size={size} color={color} />
         ),
         }} />
         <Tab.Screen name='Profile' component={ProfileScreen} options={{

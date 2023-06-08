@@ -4,14 +4,14 @@ import { s } from 'react-native-wind';
 import GamesContainer from '../components/GamesContainer';
 import { data } from '../data';
 
-const HomeScreen = () => {
+const GamesScreen = () => {
   return (
     <ScrollView>
       <View style={s`bg-blue-500 w-full h-full`}>
-        <Text>Bitches</Text>
+        <GamesContainer data={data} />
       </View>
     </ScrollView>
   );
 };
 
-export default HomeScreen;
+export default GamesScreen;
