@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { s } from 'react-native-wind';
 import GamesContainer from '../components/GamesContainer';
 import { data } from '../data';

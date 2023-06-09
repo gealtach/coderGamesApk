@@ -1,3 +1,26 @@
+export const offers: {
+  id: number;
+  title: string;
+  thumbnail: string;
+}[] = [
+  {
+    "id": 540,
+      "title": "Overwatch 2",
+      "thumbnail": "https://www.freetogame.com/g/540/thumbnail.jpg"
+  },
+  {
+    "id": 521,
+      "title": "Diablo Immortal",
+      "thumbnail": "https://www.freetogame.com/g/521/thumbnail.jpg"
+  },
+  {
+    "id": 517,
+      "title": "Lost Ark",
+      "thumbnail": "https://www.freetogame.com/g/517/thumbnail.jpg"
+  }
+]
+
+
 export const data: {
     id: number;
     title: string;
