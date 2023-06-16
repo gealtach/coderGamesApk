@@ -27,14 +27,15 @@ const Card: React.FC<CardProps> = ({ data }) => {
   const cart = useSelector((state: RootState) => state.cart.cart);
   const [ inCart, setInCart ] = useState(false);
   const dispatch = useDispatch();
-  const { id, title, price } = data;
+  const { id, title, price, thumbnail } = data;
   const addCartHandler = () => {
-    dispatch(addToCart({id, title, price}));
+    dispatch(addToCart({id, title, price, thumbnail}));
   }
 
   useEffect(() => {
     const filtered = cart.filter((item) => item.id === id);
     if(filtered.length > 0) setInCart(true)
+    else setInCart(false)
   }, [cart])
 
   return (

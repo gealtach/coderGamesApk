@@ -1,17 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
+import { View, Text, Image } from 'react-native';
+import CartState from '../components/CartState';
+import { s } from 'react-native-wind';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const CarScreen = () => {
-  const cart = useSelector((state: RootState) => state.cart.cart);
+  
   return (
-    cart && cart.map((item) => 
-    <View key={item.id}>
-      <Text>ID: {item.id}</Text>
-      <Text>Title: {item.title}</Text>
-      <Text>Price: {item.price} USD</Text>
-    </View>)
+    <ScrollView>
+      <View style={s`flex-auto`}>
+        <CartState />
+      </View>
+    </ScrollView>
   );
 };
 
