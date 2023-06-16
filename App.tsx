@@ -1,12 +1,12 @@
+import { Provider } from 'react-redux';
 import Navigation from './Navigation';
-import LoginScreen from './screens/LoginScreen';
-import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator();
+import store from './redux/store';
 
 export default function App() {
   
   return (
-    <Navigation />
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   );
 }

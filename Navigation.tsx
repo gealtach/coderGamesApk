@@ -1,13 +1,10 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screens/LoginScreen';
 import TabM from './Tab';
 
-const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-
 
 const Navigation = () => {
   return (
